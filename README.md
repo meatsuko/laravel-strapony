@@ -17,3 +17,13 @@
     }}
 ```
 - run ```composer dump-autoload```
+- insert ```\Strapony\StraponyServiceProvider::class``` in ```bootstrap\providers.php```
+```php
+<?php
+return [
+    App\Providers\AppServiceProvider::class,
+    App\Providers\TelescopeServiceProvider::class,
+
+    \Strapony\StraponyServiceProvider::class // <<< --- need add this
+];
+```
